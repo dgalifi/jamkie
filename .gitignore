@@ -1,0 +1,10 @@
+*.dbmdl
+bin/
+obj/
+node_modules/
+packages/
+
+*.suo
+*.pdb
+*.dacpac
+*.cache

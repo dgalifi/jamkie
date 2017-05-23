@@ -1,0 +1,34 @@
+﻿<!--Tempo-->
+<div class="row">
+    <div class="col-xs-3 col-md-3 metrBtn">
+        <button class="btnMetronome" ng-click="decreaseTempo()">
+            <i class="fa fa-minus" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div id="divTempo" ng-click="openTempoPopup()" class="col-xs-4 col-xs-offset-1">
+        <div class="divSpeed">{{tempo}}</div>
+    </div>
+    <div class="col-xs-3 metrBtn col-md-3 col-xs-offset-1">
+        <button class="btnMetronome" ng-click="increaseTempo()">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+    </div>
+</div>
+
+<!--Tempo popup-->
+<form novalidate ng-submit="tempoForm.$valid && changeTempo()" name="tempoForm">
+    <div class="popup-frame" ng-show="isTempoOpen">
+        <div class="row">
+            <div class="col-md-12">
+                <input type="number" name="tempo" min="10" max="150" required type="number" ng-model="tempoPopup" class="bigTextbox" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="btnOk">
+                    <button class="button" ng-click="closeTempoPopup()">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

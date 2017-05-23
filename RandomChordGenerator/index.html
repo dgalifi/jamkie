@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Backing tracks for your jamming session - Jamkie</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free backing tracks for improvisation practice. Choose your chord or get a random one and play along - Jamkie">
+    <!-- Css -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="assets/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/site.css" rel="stylesheet" />
+    <link rel="SHORTCUT ICON" HREF="assets/img/favicon.png">
+</head>
+
+<body>
+    <div class="container wrapper" ng-app="mainModule">
+        <div ng-controller="mainController">
+            <header ng-cloak id="mainHeader" ng-hide="location == 'home' ">
+                <div class="row">
+                    <!--Menu button-->
+                    <div class="col-xs-2 menu-icon-xs visible-xs hidden-md-up">
+                        <i class="fa fa-bars" aria-hidden="true" ng-click="showMenu()"></i>
+                    </div>
+                    <div class="col-xs-2 menu-icon hidden-xs">
+                        <i class="fa fa-bars" aria-hidden="true" ng-click="showMenu()"></i>
+                    </div>
+
+                    <!--Logos-->
+                    <div class="col-xs-8 logoContainer">
+                        <div class="visible-xs hidden-md-up">
+                            <a href="/#home" ng-click="setLocation('home')">
+                                <img src="/assets/img/logo.png" height="50" alt="Jamkie - backing track">
+                            </a>
+                        </div>
+                        <div class="hidden-xs">
+                            <a href="/#home" ng-click="setLocation('home')">
+                                <img src="/assets/img/logo.png" height="60" alt="Jamkie - backing track">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="/assets/img/beta.png" height="60" class="beta-img" alt="Jamkie">
+                    </div>
+                    <div class="spacer col-xs-12"></div>
+                </div>
+            </header>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                    <div class="content" ng-view="">
+                    </div>
+                </div>
+            </div>
+
+            <menu menu-hidden="menuHidden"></menu>
+        </div>
+    </div>
+    <script src="assets/libs/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+
+    <script src="assets/libs/angular-animate.js"></script>
+    <script src="assets/libs/jquery-1.11.3.min.js"></script>
+    <script src="assets/libs/bootstrap.js"></script>
+    <!-- Bundle -->
+    <script src="scripts/bundle.js"></script>
+
+    <!--Font Awesome-->
+    <script src="https://use.fontawesome.com/6ad783437e.js"></script>
+
+    <!--Analytics-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-87397909-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+
+</html>

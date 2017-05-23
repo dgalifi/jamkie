@@ -1,0 +1,18 @@
+﻿<div class="menu-panel" ng-hide="menuHidden">
+    <header>
+        <div class="row">
+            <div class="col-xs-3 col-xs-offset-1"><i class="fa fa-bars" aria-hidden="true" ng-click="hideMenu()"></i></div>
+            <div>Menu</div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="col-xs-offset-1">
+            <ul class="menu-list">
+                <!--ng-class="location.indexOf('chord-progression') !== -1 ? 'selected' : ''"--> 
+                <li ng-click="setLocation('chord-progression')"><a href="/#chord-progression"> Chord progression </a></li>
+                <!--ng-class="location.indexOf('static-chord') !== -1 ? 'selected' : ''"-->
+                <li  ng-click="setLocation('static-chord')"><a href="/#static-chord"> Static chord</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
